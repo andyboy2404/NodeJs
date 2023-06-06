@@ -34,11 +34,32 @@ let empDetails = (empId) =>{
         return obj !== null && obj[0] !== null;
     });
 }
-empDetails(103) 
-console.log(empArr);
+//empDetails(103) 
+//console.log(empArr);
 
+var newarr;
+let empUpdate= (empName,empNewName) =>{
+    newarr = empArr.map(u => u != null && u != undefined && u.empName != null && u.empName == empName ? u : null);
+    newarr = newarr.filter(function (obj) {
+        return obj !== null && obj[0] !== null;
+    });
+    
+    newarr[0].empName = empNewName;
+    //console.log(newarr);
+    //empArr= empArr.map(u => u != null && u != undefined && u.empName != null && u.empName != empName ? u : null);
+    //console.log(empArr);
+    // empArr = empArr.filter(function (obj) {
+    //     return obj !== null && obj[0] !== null;
+    // });
+    //console.log(empArr);
+    // empArr.push({
+    //     empId:newarr.empId,empName:newarr.empName,projectId:newarr.projectId
+    // });
 
+   
+}
 
+//empUpdate("Sara", "Anand");
 //console.log(empArr);
 // JOBS
 // add a new employee
