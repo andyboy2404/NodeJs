@@ -9,34 +9,15 @@ var empArr=[{empId:101,empName:"Sara",projectId:"P101"},
 {empId:109,empName:"Pranav",projectId:"P105"},
 {empId:110,empName:"Puja",projectId:"P104"}]
 
+//Add Employee
 let empAdd = (empId1,empName1,projectId1) => empArr.push({
     empId:empId1,empName:empName1,projectId:projectId1
 });
 
-// empAdd(113,'Anand','PCS')
-// // console.log(empArr);
-// var arr = empArr.map(u => u != null && u != undefined && u.empId != null && u.empId != 110 ? u : null);
-// console.log(arr);
+//  empAdd(111,'Anand123','PCS123')
+//  console.log(empArr);
 
-let empDelete = (empId) =>{
-empArr = empArr.map(u => u != null && u != undefined && u.empId != null && u.empId != empId ? u : null);
-empArr = empArr.filter(function (obj) {
-    return obj !== null && obj[0] !== null;
-});
-}
-
-//empDelete(109);
-//console.log(empArr);
-
-let empDetails = (empId) =>{
-    empArr = empArr.map(u => u != null && u != undefined && u.empId != null && u.empId == empId ? u : null);
-    empArr = empArr.filter(function (obj) {
-        return obj !== null && obj[0] !== null;
-    });
-}
-//empDetails(103) 
-//console.log(empArr);
-
+//Update Employee Name
 var newarr;
 let empUpdate= (empName,empNewName) =>{
     newarr = empArr.map(u => u != null && u != undefined && u.empName != null && u.empName == empName ? u : null);
@@ -45,22 +26,35 @@ let empUpdate= (empName,empNewName) =>{
     });
     
     newarr[0].empName = empNewName;
-    //console.log(newarr);
-    //empArr= empArr.map(u => u != null && u != undefined && u.empName != null && u.empName != empName ? u : null);
-    //console.log(empArr);
-    // empArr = empArr.filter(function (obj) {
-    //     return obj !== null && obj[0] !== null;
-    // });
-    //console.log(empArr);
-    // empArr.push({
-    //     empId:newarr.empId,empName:newarr.empName,projectId:newarr.projectId
-    // });
-
-   
 }
 
-//empUpdate("Sara", "Anand");
-//console.log(empArr);
+// empUpdate("Sara", "Anand");
+// console.log(empArr);
+
+
+//Delete Employee
+let empDelete = (empId) =>{
+empArr = empArr.map(u => u != null && u != undefined && u.empId != null && u.empId != empId ? u : null);
+empArr = empArr.filter(function (obj) {
+    return obj !== null && obj[0] !== null;
+});
+}
+
+// empDelete(101);
+// console.log(empArr);
+
+//Get Employee Detail by ID
+let empDetails = (empId) =>{
+    empArr = empArr.map(u => u != null && u != undefined && u.empId != null && u.empId == empId ? u : null);
+    empArr = empArr.filter(function (obj) {
+        return obj !== null && obj[0] !== null;
+    });
+}
+// empDetails(101) 
+// console.log(empArr);
+
+
+
 // JOBS
 // add a new employee
 // change the employee name for a particular employee
