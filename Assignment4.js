@@ -49,7 +49,7 @@ var app = http.createServer((request, response) => {
                                    return a.bookId - b.bookId ;
                                  }); 
 
-                              fs.writeFile("books.json", JSON.stringify(obj), (err) => {
+                              fs.writeFile("books.json", JSON.stringify(obj, null, 2)                              , (err) => {
                                    if (err) {
                                        console.log(`Error during the write operation : ${err}`);
                                    }
@@ -106,7 +106,7 @@ var app = http.createServer((request, response) => {
                                    return a.bookId - b.bookId ;
                                  }); 
 
-                              fs.writeFile("books.json", JSON.stringify(obj), (err) => {
+                              fs.writeFile("books.json", JSON.stringify(obj, null, 2), (err) => {
                                    if (err) {
                                        console.log(`Error during the write operation : ${err}`);
                                    }
@@ -151,7 +151,7 @@ var app = http.createServer((request, response) => {
                               obj.sort(function(a, b) { 
                                    return a.bookId - b.bookId ;
                                  }); 
-                              fs.writeFile("books.json", JSON.stringify(obj), (err) => {
+                              fs.writeFile("books.json", JSON.stringify(obj, null, 2), (err) => {
                                    if (err) {
                                        console.log(`Error during the write operation : ${err}`);
                                    }
